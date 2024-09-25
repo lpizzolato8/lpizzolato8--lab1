@@ -13,11 +13,10 @@ public class Rotor {
     public boolean rotate() {
         // TODO
         
-        String temp = new String();
         char node = rotorValues.charAt(0);
-        char lastNode = rotorValues.charAt(rotorValues.length() - 1);
-        temp = rotorValues.substring(0, rotorValues.length() - 1);
-        rotorValues = lastNode + temp;
+        String temp = rotorValues.substring(0, rotorValues.length() - 1);
+        String temp1 = rotorValues.substring(rotorValues.length()-1, rotorValues.length()-1);
+        rotorValues = temp1 + temp;
         
         if (node == startChar) {
             return true;
