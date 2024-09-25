@@ -68,3 +68,4 @@ public class Lab1_Tester {
     String[] input = {"5", "1", "3", "BUF", "decrypt", in};
     assertEquals(expected, Comms.run(input));
   }
+}

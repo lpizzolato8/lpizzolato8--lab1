@@ -7,18 +7,18 @@ public class Rotor {
         this.rotorValues = new String(v);
         this.startChar = c;
 
-
-        char node;
-
+        while(!rotate());
     }
 
     public boolean rotate() {
         // TODO
-
+        
+        String temp = new String();
         char node = rotorValues.charAt(0);
-
-
-
+        char lastNode = rotorValues.charAt(rotorValues.length() - 1);
+        temp = rotorValues.substring(0, rotorValues.length() - 1);
+        rotorValues = lastNode + temp;
+        
         if (node == startChar) {
             return true;
         }
