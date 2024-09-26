@@ -23,6 +23,9 @@ public class Enigma{
 
     public String decrypt(String message){        
         //TODO
+
+        String output = "";
+        return output;
     }
 
 
@@ -34,29 +37,24 @@ public class Enigma{
         // find the chartacter on the innermost rotor using the index -- rotor1.charAt(rotor3.indexof(a))
         // find the character on the middle rotor and get the index -- rotor2.indexof(^^)d
         // find the character on the outermost rotor using index -- rotor3.charAt(^^^)
-        // Rotate rotor3
+        // Rotate rotor
         // if same value then middle rotates -- if rotate = true, rotat middle
 
         if(rotors[0].rotate()){
             rotors[2].rotate();
         }
-        
+        String cypher = "";
+
         for(int i = 0; i < message.length(); i++){
-            rotors[3].indexOf(message.charAt(i));
-        rotors[1].charAt();
-        rotors[2].indexOf();
-        rotors[3].charAt();
-
-        }
-
-        rotors[3].indexOf();
-        rotors[1].charAt();
-        rotors[2].indexOf();
-        rotors[3].charAt();
-
+        int rahhh = rotors[3].indexOf(message.charAt(i));
+        char rahh = rotors[1].charAt(rahhh); 
+        int rah = rotors[2].indexOf(rahh);
+        char ra = rotors[3].charAt(rah);
+        cypher = cypher + ra;
         rotors[3].rotate();
-
-
+        }
+        
+        return cypher;
 
 
     }
