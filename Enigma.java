@@ -25,6 +25,20 @@ public class Enigma{
         //TODO
 
         String output = "";
+
+        if(rotors[0].rotate()){
+            rotors[2].rotate();
+        }
+
+        for(int i = 0; i < message.length() ; i++){
+        int rahhh = rotors[2].indexOf(message.charAt(i));
+        char rahh = rotors[1].charAt(rahhh); 
+        int rah = rotors[0].indexOf(rahh);
+        char ra = rotors[2].charAt(rah);
+        output = output + ra;
+        rotors[2].rotate();
+        }
+
         return output;
     }
 
@@ -41,17 +55,17 @@ public class Enigma{
         // if same value then middle rotates -- if rotate = true, rotat middle
 
         if(rotors[0].rotate()){
-            rotors[2].rotate();
+            rotors[1].rotate();
         }
         String cypher = "";
 
         for(int i = 0; i < message.length(); i++){
-        int rahhh = rotors[3].indexOf(message.charAt(i));
-        char rahh = rotors[1].charAt(rahhh); 
-        int rah = rotors[2].indexOf(rahh);
-        char ra = rotors[3].charAt(rah);
+        int rahhh = rotors[2].indexOf(message.charAt(i));
+        char rahh = rotors[0].charAt(rahhh); 
+        int rah = rotors[1].indexOf(rahh);
+        char ra = rotors[2].charAt(rah);
         cypher = cypher + ra;
-        rotors[3].rotate();
+        rotors[2].rotate();
         }
         
         return cypher;

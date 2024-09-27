@@ -3,16 +3,17 @@ public class Rotor {
     private String rotorValues;
     private char startChar;
 
-    public Rotor(String v, char c) {
+    public Rotor(String v, char c) {        
         this.rotorValues = new String(v);
         this.startChar = c;
 
-        while(!rotate());
-    }
+        String temp = rotorValues.substring(c, c);
+        String temp1 = rotorValues.substring(0, startChar-1);
+        this.rotorValues = temp + temp1;
+    }   
 
     public boolean rotate() {
         // TODO
-        
         char node = rotorValues.charAt(0);
         String temp = rotorValues.substring(0, rotorValues.length() - 1);
         String temp1 = rotorValues.substring(rotorValues.length()-1, rotorValues.length()-1);
